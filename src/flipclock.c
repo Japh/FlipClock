@@ -105,18 +105,18 @@ void update_display(PblTm *current_time) {
   set_container_image(&day_name_image, DAY_NAME_IMAGE_RESOURCE_IDS[current_time->tm_wday], GPoint(69, 61));
 
   // TODO: Remove leading zero?
-  set_container_image(&date_digits_images[0], DATENUM_IMAGE_RESOURCE_IDS[current_time->tm_mday/10], GPoint(108, 61));
-  set_container_image(&date_digits_images[1], DATENUM_IMAGE_RESOURCE_IDS[current_time->tm_mday%10], GPoint(121, 61));
+  set_container_image(&date_digits_images[0], BIG_DIGIT_IMAGE_RESOURCE_IDS[current_time->tm_mday/10], GPoint(1, 0));
+  set_container_image(&date_digits_images[1], BIG_DIGIT_IMAGE_RESOURCE_IDS[current_time->tm_mday%10], GPoint(36, 0));
 
 
   unsigned short display_hour = get_display_hour(current_time->tm_hour);
 
   // TODO: Remove leading zero?
-  set_container_image(&time_digits_images[0], BIG_DIGIT_IMAGE_RESOURCE_IDS[display_hour/10], GPoint(10, 84));
-  set_container_image(&time_digits_images[1], BIG_DIGIT_IMAGE_RESOURCE_IDS[display_hour%10], GPoint(40, 84));
+  set_container_image(&time_digits_images[0], BIG_DIGIT_IMAGE_RESOURCE_IDS[display_hour/10], GPoint(1, 84));
+  set_container_image(&time_digits_images[1], BIG_DIGIT_IMAGE_RESOURCE_IDS[display_hour%10], GPoint(36, 84));
 
-  set_container_image(&time_digits_images[2], BIG_DIGIT_IMAGE_RESOURCE_IDS[current_time->tm_min/10], GPoint(77, 84));
-  set_container_image(&time_digits_images[3], BIG_DIGIT_IMAGE_RESOURCE_IDS[current_time->tm_min%10], GPoint(105, 84));
+  set_container_image(&time_digits_images[2], BIG_DIGIT_IMAGE_RESOURCE_IDS[current_time->tm_min/10], GPoint(74, 84));
+  set_container_image(&time_digits_images[3], BIG_DIGIT_IMAGE_RESOURCE_IDS[current_time->tm_min%10], GPoint(109, 84));
 
   if (!clock_is_24h_style()) {
     if (current_time->tm_hour >= 12) {
