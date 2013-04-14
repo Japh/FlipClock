@@ -20,31 +20,22 @@ BmpContainer meter_bar_image;
 BmpContainer time_format_image;
 
 
-const int DAY_NAME_IMAGE_RESOURCE_IDS[] = {
-  RESOURCE_ID_IMAGE_DAY_NAME_SUN,
-  RESOURCE_ID_IMAGE_DAY_NAME_MON,
-  RESOURCE_ID_IMAGE_DAY_NAME_TUE,
-  RESOURCE_ID_IMAGE_DAY_NAME_WED,
-  RESOURCE_ID_IMAGE_DAY_NAME_THU,
-  RESOURCE_ID_IMAGE_DAY_NAME_FRI,
-  RESOURCE_ID_IMAGE_DAY_NAME_SAT
+const int MONTH_NAME_IMAGE_RESOURCE_IDS[] = {
+  RESOURCE_ID_IMAGE_MONTH_NAME_JAN,
+  RESOURCE_ID_IMAGE_MONTH_NAME_FEB,
+  RESOURCE_ID_IMAGE_MONTH_NAME_MAR,
+  RESOURCE_ID_IMAGE_MONTH_NAME_APR,
+  RESOURCE_ID_IMAGE_MONTH_NAME_MAY,
+  RESOURCE_ID_IMAGE_MONTH_NAME_JUN,
+  RESOURCE_ID_IMAGE_MONTH_NAME_JUL,
+  RESOURCE_ID_IMAGE_MONTH_NAME_AUG,
+  RESOURCE_ID_IMAGE_MONTH_NAME_SEP,
+  RESOURCE_ID_IMAGE_MONTH_NAME_OCT,
+  RESOURCE_ID_IMAGE_MONTH_NAME_NOV,
+  RESOURCE_ID_IMAGE_MONTH_NAME_DEC
 };
 
-BmpContainer day_name_image;
-
-
-const int DATENUM_IMAGE_RESOURCE_IDS[] = {
-  RESOURCE_ID_IMAGE_DATENUM_0,
-  RESOURCE_ID_IMAGE_DATENUM_1,
-  RESOURCE_ID_IMAGE_DATENUM_2,
-  RESOURCE_ID_IMAGE_DATENUM_3,
-  RESOURCE_ID_IMAGE_DATENUM_4,
-  RESOURCE_ID_IMAGE_DATENUM_5,
-  RESOURCE_ID_IMAGE_DATENUM_6,
-  RESOURCE_ID_IMAGE_DATENUM_7,
-  RESOURCE_ID_IMAGE_DATENUM_8,
-  RESOURCE_ID_IMAGE_DATENUM_9
-};
+BmpContainer month_name_image;
 
 
 #define TOTAL_DATE_DIGITS 2
@@ -102,7 +93,7 @@ unsigned short get_display_hour(unsigned short hour) {
 void update_display(PblTm *current_time) {
   // TODO: Only update changed values?
 
-  set_container_image(&day_name_image, DAY_NAME_IMAGE_RESOURCE_IDS[current_time->tm_wday], GPoint(69, 61));
+  set_container_image(&month_name_image, MONTH_NAME_IMAGE_RESOURCE_IDS[current_time->tm_mon], GPoint(74, 0));
 
   // TODO: Remove leading zero?
   set_container_image(&date_digits_images[0], BIG_DIGIT_IMAGE_RESOURCE_IDS[current_time->tm_mday/10], GPoint(1, 0));
@@ -187,7 +178,7 @@ void handle_deinit(AppContextRef ctx) {
   bmp_deinit_container(&background_image);
   bmp_deinit_container(&meter_bar_image);
   bmp_deinit_container(&time_format_image);
-  bmp_deinit_container(&day_name_image);
+  bmp_deinit_container(&month_name_image);
 
   for (int i = 0; i < TOTAL_DATE_DIGITS; i++) {
     bmp_deinit_container(&date_digits_images[i]);
