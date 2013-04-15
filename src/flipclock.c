@@ -109,20 +109,6 @@ void update_display(PblTm *current_time) {
   set_container_image(&time_digits_images[2], BIG_DIGIT_IMAGE_RESOURCE_IDS[current_time->tm_min/10], GPoint(74, 84));
   set_container_image(&time_digits_images[3], BIG_DIGIT_IMAGE_RESOURCE_IDS[current_time->tm_min%10], GPoint(109, 84));
 
-  if (!clock_is_24h_style()) {
-    if (current_time->tm_hour >= 12) {
-      set_container_image(&time_format_image, RESOURCE_ID_IMAGE_PM_MODE, GPoint(17, 68));
-    } else {
-      layer_remove_from_parent(&time_format_image.layer.layer);
-      bmp_deinit_container(&time_format_image);
-    }
-
-    if (display_hour/10 == 0) {
-      layer_remove_from_parent(&time_digits_images[0].layer.layer);
-      bmp_deinit_container(&time_digits_images[0]);
-    }
-  }
-
 }
 
 
@@ -143,24 +129,6 @@ void handle_init(AppContextRef ctx) {
 
   bmp_init_container(RESOURCE_ID_IMAGE_BACKGROUND, &background_image);
   layer_add_child(&window.layer, &background_image.layer.layer);
-
-
-  bmp_init_container(RESOURCE_ID_IMAGE_METER_BAR, &meter_bar_image);
-
-  meter_bar_image.layer.layer.frame.origin.x = 17;
-  meter_bar_image.layer.layer.frame.origin.y = 43;
-
-  layer_add_child(&window.layer, &meter_bar_image.layer.layer);
-
-
-  if (clock_is_24h_style()) {
-    bmp_init_container(RESOURCE_ID_IMAGE_24_HOUR_MODE, &time_format_image);
-
-    time_format_image.layer.layer.frame.origin.x = 17;
-    time_format_image.layer.layer.frame.origin.y = 68;
-
-    layer_add_child(&window.layer, &time_format_image.layer.layer);
-  }
 
 
   // Avoids a blank screen on watch start.

@@ -16,24 +16,6 @@
 
 	{
         "type": "png",
-        "defName": "IMAGE_METER_BAR",
-        "file": "images/icon_meter.png"
-        },
-
-	{
-        "type": "png",
-        "defName": "IMAGE_24_HOUR_MODE",
-        "file": "images/time_format_24H.png"
-        },
-
-	{
-        "type": "png",
-        "defName": "IMAGE_PM_MODE",
-        "file": "images/time_format_PM.png"
-        },
-
-	{
-        "type": "png",
         "defName": "IMAGE_MONTH_NAME_JAN",
         "file": "images/month_jan.png"
         },
