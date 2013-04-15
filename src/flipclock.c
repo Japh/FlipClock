@@ -14,9 +14,6 @@ Window window;
 
 BmpContainer background_image;
 
-// TODO: Handle 12/24 mode preference when it's exposed.
-BmpContainer time_format_image;
-
 
 const int MONTH_NAME_IMAGE_RESOURCE_IDS[] = {
   RESOURCE_ID_IMAGE_MONTH_NAME_JAN,
@@ -142,7 +139,6 @@ void handle_deinit(AppContextRef ctx) {
   (void)ctx;
 
   bmp_deinit_container(&background_image);
-  bmp_deinit_container(&time_format_image);
   bmp_deinit_container(&month_name_image);
 
   for (int i = 0; i < TOTAL_DATE_DIGITS; i++) {
