@@ -14,8 +14,6 @@ Window window;
 
 BmpContainer background_image;
 
-BmpContainer meter_bar_image;
-
 // TODO: Handle 12/24 mode preference when it's exposed.
 BmpContainer time_format_image;
 
@@ -144,7 +142,6 @@ void handle_deinit(AppContextRef ctx) {
   (void)ctx;
 
   bmp_deinit_container(&background_image);
-  bmp_deinit_container(&meter_bar_image);
   bmp_deinit_container(&time_format_image);
   bmp_deinit_container(&month_name_image);
 
