@@ -30,7 +30,8 @@ const int MONTH_NAME_IMAGE_RESOURCE_IDS[] = {
   RESOURCE_ID_IMAGE_MONTH_NAME_DEC
 };
 
-BmpContainer month_name_image;
+BmpContainer month_name_image1;
+BmpContainer month_name_image2;
 
 
 #define TOTAL_DATE_DIGITS 2
@@ -55,7 +56,7 @@ const int BIG_DIGIT_IMAGE_RESOURCE_IDS[] = {
 BmpContainer time_digits_images[TOTAL_TIME_DIGITS];
 
 
-void set_container_image(BmpContainer *bmp_container, const int resource_id, GPoint origin) {
+void set_container_image(BmpContainer *bmp_container, const int resource_id, GPoint origin, GSize size) {
 
   layer_remove_from_parent(&bmp_container->layer.layer);
   bmp_deinit_container(bmp_container);
@@ -65,6 +66,8 @@ void set_container_image(BmpContainer *bmp_container, const int resource_id, GPo
   GRect frame = layer_get_frame(&bmp_container->layer.layer);
   frame.origin.x = origin.x;
   frame.origin.y = origin.y;
+  frame.size.w = size.w;
+  frame.size.h = size.h;
   layer_set_frame(&bmp_container->layer.layer, frame);
 
   layer_add_child(&window.layer, &bmp_container->layer.layer);
@@ -88,21 +91,22 @@ unsigned short get_display_hour(unsigned short hour) {
 void update_display(PblTm *current_time) {
   // TODO: Only update changed values?
 
-  set_container_image(&month_name_image, MONTH_NAME_IMAGE_RESOURCE_IDS[current_time->tm_mon], GPoint(74, 0));
+  set_container_image(&month_name_image1, MONTH_NAME_IMAGE_RESOURCE_IDS[current_time->tm_mon], GPoint(74, 0), GSize(68, 42));
+  set_container_image(&month_name_image2, MONTH_NAME_IMAGE_RESOURCE_IDS[current_time->tm_mon], GPoint(74, 42), GSize(68, 42));
 
   // TODO: Remove leading zero?
-  set_container_image(&date_digits_images[0], BIG_DIGIT_IMAGE_RESOURCE_IDS[current_time->tm_mday/10], GPoint(1, 0));
-  set_container_image(&date_digits_images[1], BIG_DIGIT_IMAGE_RESOURCE_IDS[current_time->tm_mday%10], GPoint(36, 0));
+  set_container_image(&date_digits_images[0], BIG_DIGIT_IMAGE_RESOURCE_IDS[current_time->tm_mday/10], GPoint(1, 0), GSize(34, 42));
+  set_container_image(&date_digits_images[1], BIG_DIGIT_IMAGE_RESOURCE_IDS[current_time->tm_mday%10], GPoint(36, 0), GSize(34, 42));
 
 
   unsigned short display_hour = get_display_hour(current_time->tm_hour);
 
   // TODO: Remove leading zero?
-  set_container_image(&time_digits_images[0], BIG_DIGIT_IMAGE_RESOURCE_IDS[display_hour/10], GPoint(1, 84));
-  set_container_image(&time_digits_images[1], BIG_DIGIT_IMAGE_RESOURCE_IDS[display_hour%10], GPoint(36, 84));
+  set_container_image(&time_digits_images[0], BIG_DIGIT_IMAGE_RESOURCE_IDS[display_hour/10], GPoint(1, 84), GSize(34, 42));
+  set_container_image(&time_digits_images[1], BIG_DIGIT_IMAGE_RESOURCE_IDS[display_hour%10], GPoint(36, 84), GSize(34, 42));
 
-  set_container_image(&time_digits_images[2], BIG_DIGIT_IMAGE_RESOURCE_IDS[current_time->tm_min/10], GPoint(74, 84));
-  set_container_image(&time_digits_images[3], BIG_DIGIT_IMAGE_RESOURCE_IDS[current_time->tm_min%10], GPoint(109, 84));
+  set_container_image(&time_digits_images[2], BIG_DIGIT_IMAGE_RESOURCE_IDS[current_time->tm_min/10], GPoint(74, 84), GSize(34, 42));
+  set_container_image(&time_digits_images[3], BIG_DIGIT_IMAGE_RESOURCE_IDS[current_time->tm_min%10], GPoint(109, 84), GSize(34, 42));
 
 }
 
@@ -139,7 +143,8 @@ void handle_deinit(AppContextRef ctx) {
   (void)ctx;
 
   bmp_deinit_container(&background_image);
-  bmp_deinit_container(&month_name_image);
+  bmp_deinit_container(&month_name_image1);
+  bmp_deinit_container(&month_name_image2);
 
   for (int i = 0; i < TOTAL_DATE_DIGITS; i++) {
     bmp_deinit_container(&date_digits_images[i]);
