@@ -1,0 +1,93 @@
+$slot-height: 84px;
+
+#preloader {
+	display: none;
+}
+
+/* Styles */
+#clockface {
+	background: #000 url(../../resources/src/images/background.png);
+	width: 144px;
+	height: 168px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.top-slot {
+	width: 34px;
+	height: ($slot-height / 2);
+	position: absolute;
+	background-position: 0 0;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	z-index: 999;
+}
+
+.bottom-slot {
+	width: 34px;
+	height: ($slot-height / 2);
+	position: absolute;
+	background-position: 0 ($slot-height / 2 * -1);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+
+.row1.top-slot {
+	top: 0px;
+}
+
+.row2.top-slot {
+	top: $slot-height;
+}
+
+.row1.bottom-slot {
+	top: ($slot-height / 2);
+}
+
+.row2.bottom-slot {
+	top: ($slot-height * 1.5);
+}
+
+.slot1 {
+	background-image: url(../../resources/src/images/num_1.png);
+	left: 1px;
+	top: 0;
+}
+
+.slot2 {
+	background-image: url(../../resources/src/images/num_5.png);
+	left: 36px;
+	top: 0;
+}
+
+.slot3 {
+	width: 69px;
+	background-image: url(../../resources/src/images/month_apr.png);
+	left: 74px;
+	top: 0;
+}
+
+.slot4 {
+	background-image: url(../../resources/src/images/num_1.png);
+	left: 1px;
+	top: 84px;
+}
+
+.slot5 {
+	background-image: url(../../resources/src/images/num_0.png);
+	left: 36px;
+	top: 84px;
+}
+
+.slot6 {
+	background-image: url(../../resources/src/images/num_3.png);
+	left: 74px;
+	top: 84px;
+}
+
+.slot7 {
+	background-image: url(../../resources/src/images/num_7.png);
+	left: 109px;
+	top: 84px;
+}
