@@ -1,0 +1,349 @@
+{
+  "uuid": "01ecdbf1-2f6e-4ce5-bc43-0b57e4c00a46",
+  "shortName": "FlipClock",
+  "longName": "FlipClock",
+  "companyName": "Japheth Thomson",
+  "versionCode": 1,
+  "versionLabel": "2.0.0",
+  "watchapp": {
+    "watchface": true
+  },
+  "capabilities": ["configurable"],
+  "appKeys": {
+    "inverted": 0,
+    "12hTime": 1,
+    "showDate": 2
+  },
+  "resources": {
+    "media": [{
+      "menuIcon": true,
+      "type": "png",
+      "name": "IMAGE_MENU_ICON",
+      "file": "images/menu_icon.png"
+    },{
+      "type": "png",
+      "name": "IMAGE_BACKGROUND",
+      "file": "images/background.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_ZERO_TOP",
+      "file": "images/num-0-top.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_ZERO_TOP_45",
+      "file": "images/num-0-top-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_ZERO_TOP_60",
+      "file": "images/num-0-top-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_ZERO_TOP_75",
+      "file": "images/num-0-top-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_ZERO_BOT",
+      "file": "images/num-0-bot.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_ZERO_BOT_45",
+      "file": "images/num-0-bot-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_ZERO_BOT_60",
+      "file": "images/num-0-bot-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_ZERO_BOT_75",
+      "file": "images/num-0-bot-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_ONE_TOP",
+      "file": "images/num-1-top.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_ONE_TOP_45",
+      "file": "images/num-1-top-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_ONE_TOP_60",
+      "file": "images/num-1-top-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_ONE_TOP_75",
+      "file": "images/num-1-top-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_ONE_BOT",
+      "file": "images/num-1-bot.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_ONE_BOT_45",
+      "file": "images/num-1-bot-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_ONE_BOT_60",
+      "file": "images/num-1-bot-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_ONE_BOT_75",
+      "file": "images/num-1-bot-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_TWO_TOP",
+      "file": "images/num-2-top.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_TWO_TOP_45",
+      "file": "images/num-2-top-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_TWO_TOP_60",
+      "file": "images/num-2-top-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_TWO_TOP_75",
+      "file": "images/num-2-top-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_TWO_BOT",
+      "file": "images/num-2-bot.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_TWO_BOT_45",
+      "file": "images/num-2-bot-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_TWO_BOT_60",
+      "file": "images/num-2-bot-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_TWO_BOT_75",
+      "file": "images/num-2-bot-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_THREE_TOP",
+      "file": "images/num-3-top.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_THREE_TOP_45",
+      "file": "images/num-3-top-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_THREE_TOP_60",
+      "file": "images/num-3-top-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_THREE_TOP_75",
+      "file": "images/num-3-top-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_THREE_BOT",
+      "file": "images/num-3-bot.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_THREE_BOT_45",
+      "file": "images/num-3-bot-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_THREE_BOT_60",
+      "file": "images/num-3-bot-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_THREE_BOT_75",
+      "file": "images/num-3-bot-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_FOUR_TOP",
+      "file": "images/num-4-top.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_FOUR_TOP_45",
+      "file": "images/num-4-top-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_FOUR_TOP_60",
+      "file": "images/num-4-top-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_FOUR_TOP_75",
+      "file": "images/num-4-top-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_FOUR_BOT",
+      "file": "images/num-4-bot.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_FOUR_BOT_45",
+      "file": "images/num-4-bot-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_FOUR_BOT_60",
+      "file": "images/num-4-bot-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_FOUR_BOT_75",
+      "file": "images/num-4-bot-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_FIVE_TOP",
+      "file": "images/num-5-top.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_FIVE_TOP_45",
+      "file": "images/num-5-top-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_FIVE_TOP_60",
+      "file": "images/num-5-top-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_FIVE_TOP_75",
+      "file": "images/num-5-top-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_FIVE_BOT",
+      "file": "images/num-5-bot.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_FIVE_BOT_45",
+      "file": "images/num-5-bot-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_FIVE_BOT_60",
+      "file": "images/num-5-bot-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_FIVE_BOT_75",
+      "file": "images/num-5-bot-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_SIX_TOP",
+      "file": "images/num-6-top.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_SIX_TOP_45",
+      "file": "images/num-6-top-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_SIX_TOP_60",
+      "file": "images/num-6-top-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_SIX_TOP_75",
+      "file": "images/num-6-top-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_SIX_BOT",
+      "file": "images/num-6-bot.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_SIX_BOT_45",
+      "file": "images/num-6-bot-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_SIX_BOT_60",
+      "file": "images/num-6-bot-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_SIX_BOT_75",
+      "file": "images/num-6-bot-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_SEVEN_TOP",
+      "file": "images/num-7-top.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_SEVEN_TOP_45",
+      "file": "images/num-7-top-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_SEVEN_TOP_60",
+      "file": "images/num-7-top-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_SEVEN_TOP_75",
+      "file": "images/num-7-top-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_SEVEN_BOT",
+      "file": "images/num-7-bot.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_SEVEN_BOT_45",
+      "file": "images/num-7-bot-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_SEVEN_BOT_60",
+      "file": "images/num-7-bot-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_SEVEN_BOT_75",
+      "file": "images/num-7-bot-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_EIGHT_TOP",
+      "file": "images/num-8-top.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_EIGHT_TOP_45",
+      "file": "images/num-8-top-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_EIGHT_TOP_60",
+      "file": "images/num-8-top-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_EIGHT_TOP_75",
+      "file": "images/num-8-top-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_EIGHT_BOT",
+      "file": "images/num-8-bot.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_EIGHT_BOT_45",
+      "file": "images/num-8-bot-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_EIGHT_BOT_60",
+      "file": "images/num-8-bot-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_EIGHT_BOT_75",
+      "file": "images/num-8-bot-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_NINE_TOP",
+      "file": "images/num-9-top.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_NINE_TOP_45",
+      "file": "images/num-9-top-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_NINE_TOP_60",
+      "file": "images/num-9-top-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_NINE_TOP_75",
+      "file": "images/num-9-top-75.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_NINE_BOT",
+      "file": "images/num-9-bot.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_NINE_BOT_45",
+      "file": "images/num-9-bot-45.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_NINE_BOT_60",
+      "file": "images/num-9-bot-60.png"
+    },{
+      "type": "png-trans",
+      "name": "IMAGE_NINE_BOT_75",
+      "file": "images/num-9-bot-75.png"
+    }]
+  }
+}
