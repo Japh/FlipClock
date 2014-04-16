@@ -27,7 +27,7 @@ To build this watchface from source. Follow these steps:
 
 1. Clone this repository in an appropriate directory. For example:
 
-    `$ git clone https://github.com/rexmac/pebble-flipclock.git`
+    `$ git clone https://github.com/Japh/FlipClock.git`
 
 2. Build the project:
 
@@ -41,7 +41,7 @@ For more information on building and installing Pebble apps from source, please 
 
 ## Bugs, Suggestions, Comments
 
-Please use the [Github issue system](https://github.com/rexmac/pebble-flipclock/issues) to report bugs, request new features, or ask questions.
+Please use the [Github issue system](https://github.com/Japh/FlipClock/issues) to report bugs, request new features, or ask questions.
 
 ## Credits
 
