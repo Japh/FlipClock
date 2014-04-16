@@ -1,0 +1,137 @@
+{
+  "uuid": "f54347e7-d945-4b59-9a5c-37efdcf00859",
+  "shortName": "Flip Clock",
+  "longName": "Flip Clock",
+  "companyName": "Japh",
+  "versionCode": 0,
+  "versionLabel": "0.1.0",
+  "watchapp": {
+    "watchface": true
+  },
+  "appKeys": {},
+  "resources": {
+    "media": [
+      {
+        "menuIcon": true,
+        "type": "png",
+        "name": "IMAGE_MENU_ICON",
+        "file": "images/menu_icon_flipclock.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_BACKGROUND",
+        "file": "images/background.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MONTH_NAME_JAN",
+        "file": "images/month_jan.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MONTH_NAME_FEB",
+        "file": "images/month_feb.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MONTH_NAME_MAR",
+        "file": "images/month_mar.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MONTH_NAME_APR",
+        "file": "images/month_apr.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MONTH_NAME_MAY",
+        "file": "images/month_may.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MONTH_NAME_JUN",
+        "file": "images/month_jun.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MONTH_NAME_JUL",
+        "file": "images/month_jul.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MONTH_NAME_AUG",
+        "file": "images/month_aug.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MONTH_NAME_SEP",
+        "file": "images/month_sep.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MONTH_NAME_OCT",
+        "file": "images/month_oct.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MONTH_NAME_NOV",
+        "file": "images/month_nov.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MONTH_NAME_DEC",
+        "file": "images/month_dec.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_0",
+        "file": "images/num_0.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_1",
+        "file": "images/num_1.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_2",
+        "file": "images/num_2.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_3",
+        "file": "images/num_3.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_4",
+        "file": "images/num_4.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_5",
+        "file": "images/num_5.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_6",
+        "file": "images/num_6.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_7",
+        "file": "images/num_7.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_8",
+        "file": "images/num_8.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_9",
+        "file": "images/num_9.png"
+      }
+    ]
+  }
+}
